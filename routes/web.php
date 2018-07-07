@@ -14,3 +14,26 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('id{number?}', function ($number) {
+
+    if ($number == 123) {
+        echo $number;
+    }
+    else {
+        echo 'пользователь не зарегистрирован';
+    }
+
+});
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+
+Route::post('form', function () {
+    echo 'форма принята';
+});
+
+
