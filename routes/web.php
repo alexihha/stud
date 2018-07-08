@@ -15,16 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('id{number?}', function ($number) {
 
-    if ($number == 123) {
-        echo $number;
-    }
-    else {
-        echo 'пользователь не зарегистрирован';
-    }
 
-});
+Route::get('id{number?}', 'UserController@number')->where('number', '[0-9]+');
+
+
 
 Route::get('/form', 'UserController@get');
 
