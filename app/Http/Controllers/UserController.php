@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function post()
     {
-        echo 'форма принята';
+        return view('formok');
     }
 
     public function number($number = null)
@@ -22,9 +22,9 @@ class UserController extends Controller
 
 
         if ($number == 123) {
-            echo $number;
+            return view('user', ['number'=>$number]);
         } else {
-            echo 'пользователь не зарегистрирован';
+            return view('user404');
         }
 
     }

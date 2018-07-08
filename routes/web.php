@@ -20,7 +20,6 @@ Route::get('/', function () {
 Route::get('id{number?}', 'UserController@number')->where('number', '[0-9]+');
 
 
-
 Route::get('/form', 'UserController@get');
 
 Route::post('/form', 'UserController@post');
