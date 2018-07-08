@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('id{number?}', function ($number) {
 
     if ($number == 123) {
@@ -27,13 +26,6 @@ Route::get('id{number?}', function ($number) {
 
 });
 
-Route::get('/form', function () {
-    return view('form');
-});
+Route::get('/form', 'UserController@get');
 
-
-Route::post('form', function () {
-    echo 'форма принята';
-});
-
-
+Route::post('/form', 'UserController@post');
